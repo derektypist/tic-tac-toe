@@ -82,3 +82,14 @@ li span {
     position: relative;
     bottom: 15px;
 }
+
+/* Canvas Drawing */
+#my-canvas {
+    width: 330px;
+    height: 330px;
+    position: absolute;
+    z-index: 0;
+    left: 10px;
+    top: 0;
+    opacity: 0;
+}
