@@ -93,3 +93,14 @@ li span {
     top: 0;
     opacity: 0;
 }
+
+/* Player/Computer Prompt */
+.player-one-turn {
+    background: rgba(79,132,196,1);
+    left: 15px;
+}
+
+.player-two-turn {
+    background: rgba(220,76,70,1);
+    right: 15px;
+}
