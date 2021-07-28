@@ -18,7 +18,11 @@ As a user, I can choose whether I want to play as X or O.
 
 ## Features
 
-Enable play against the computer or with another human player.
+You can play against the computer or with another human player.  If you play against the computer, you can choose X or O.  You can reset at any time, even before the outcome of the game.  This is useful in an emergency.
+
+## Technologies
+
+Uses HTML5, CSS3, Font Awesome 5.15.3.
 
 ## Credits
 
