@@ -26,3 +26,15 @@ header {
     margin: 10% auto;
     padding: 40px 0 0;
 }
+
+/* Board Container */
+.board-container {
+    background: black;
+    width: 350px;
+    height: 350px;
+    background-size:cover;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
