@@ -260,3 +260,23 @@ i.win {
     outline: none;
 }
 
+.game-choice button:hover, .game-starter button:hover {
+    opacity: 1;
+    border: 2px dashed rgba(230,230,230,0.5);
+}
+
+.game-starter button.back-button {
+    position: absolute;
+    top: 270px;
+    left: 130px;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.game-starter .back-button:hover {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
