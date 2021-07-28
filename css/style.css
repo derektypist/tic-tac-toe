@@ -241,3 +241,22 @@ i.win {
 .game-choice p, .game-starter p {
     max-width: 80%;
 }
+
+.game-choice button, .game-starter button {
+    background: none;
+    border: none;
+    opacity: 0.6;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    font-size: 1.7rem;
+    font-family: inherit;
+}
+
+.game-starter button {
+    font-size: 2.8rem;
+}
+
+.game-choice button:focus, .game-starter button:focus {
+    outline: none;
+}
+
