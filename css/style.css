@@ -280,3 +280,18 @@ i.win {
 button {
     cursor: pointer;
 }
+
+/* Win/Lose Animation */
+.rotate {
+    animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
