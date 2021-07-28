@@ -32,4 +32,5 @@ Taken from FreeCodeCamp
 
 ### Acknowledgements
 
-[FreeCodeCamp](https://www.freecodecamp.org)
+- [FreeCodeCamp](https://www.freecodecamp.org)
+- [w3Schools](https://www.w3schools.com)
