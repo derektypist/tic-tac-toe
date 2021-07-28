@@ -179,3 +179,35 @@ li span {
 .hard-reset:focus {
     outline: none;
 }
+
+/* Result Feedback */
+span.rotate {
+    color: rgba(79,132,196,1);
+}
+
+i.win {
+    background: black;
+}
+
+.draw-message, .win-message, .lose-message {
+    background: rgba(0,0,0,0.8);
+    width: 400px;
+    height: 400px;
+    z-index: 2000;
+    position: absolute;
+    display: none;
+    top: -15px;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.draw-message p, .win-message p, .lose-message p {
+    color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 2.3rem;
+    margin: 0;
+    top: 150px;
+    left: 50px;
+}
+
