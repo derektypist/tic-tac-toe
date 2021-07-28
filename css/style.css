@@ -104,3 +104,18 @@ li span {
     background: rgba(220,76,70,1);
     right: 15px;
 }
+
+.player-one-turn, .player-two-turn {
+    position: absolute;
+    top: 0;
+    width: 170px;
+    height: 50px;
+    z-index: -10;
+    color: white;
+    text-align: center;
+}
+
+.player-one-turn p, .player-two-turn p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
