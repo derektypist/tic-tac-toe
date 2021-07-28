@@ -155,3 +155,27 @@ li span {
 .score-2 {
     left: 161px;
 }
+
+/* Reset Button */
+.hard-reset {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: rgba(100,60,50,0.8);
+    font-size: 1.1rem;
+    border-radius: 20px;
+    border: 2px dashed transparent;
+    display: none;
+}
+
+.hard-reset:hover {
+    border: 2px dashed rgba(100,60,50,1);
+    color: rgba(100,60,50,1);
+}
+
+.hard-reset:focus {
+    outline: none;
+}
