@@ -171,5 +171,17 @@ $(document).ready(function() {
         }
     }
 
-    
+    // Function to Show Score
+    function showScore() {
+        if (secondPlayer) {
+            $('.score-1').children('.name').text('player 1');
+            $('.score-2').children('.name').text('player 2');
+        } else {
+            $('.score-1').children('.name').text('player 1');
+            $('.score-2').children('.name').text('computer');
+        }
+
+        $('.score-1, .score-2').children('.points').text('0');
+        $('.score-1, .score-2, .points-divider').fadeIn();
+    }
 });
