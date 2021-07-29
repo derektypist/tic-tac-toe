@@ -210,4 +210,25 @@ $(document).ready(function() {
             return true;
         }
     }
+
+    // Function for First Game
+    function firstGame() {
+        let playerOneSymbol = $(this).text();
+        let playerTwoSymbol = playerOneSymbol == 'X' ? 'O' : 'X';
+        turn = whoStarts();
+        hideGameStarter();
+        $('#my-canvas').animate({opacity:'1'},1200);
+        $('.hard-reset').fadeIn(600);
+        showScore();
+        resetSquares();
+        play();
+    }
+
+    // Function to Play Game
+    function play() {
+        gameInPlay = true;
+        $('.boxes li').click(function() {
+            playerTurn(this);
+        });
+    }
 });
