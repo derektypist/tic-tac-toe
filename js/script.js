@@ -230,5 +230,21 @@ $(document).ready(function() {
         $('.boxes li').click(function() {
             playerTurn(this);
         });
+
+        timeOuts.push(setTimeout(function() {
+            if (turn === 1) {
+                showPlayerOnePrompt();
+            } else {
+                showPlayerTwoPrompt();
+            }
+        }, 1500), setTimeout(function() {
+            if (turn === 2 && secondPlayer) {
+                computerPlay();
+            }
+        }, 1200));
     }
+
+    
+
+
 });
