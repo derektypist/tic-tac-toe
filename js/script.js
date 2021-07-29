@@ -190,4 +190,24 @@ $(document).ready(function() {
         let currentScore = turn === 1 ? playerOneScore : playerTwoScore;
         $(`.score-${turn}`).children('.points').text(currentScore);
     }
+
+    /*
+        Game Logic
+    */
+
+    // Function to See Who Starts
+    function whoStarts() {
+        let random = Math.floor(Math.random() * 2 + 1);
+        return random;
+    }
+
+    // Function for Game Selection
+    function gameSelection(item) {
+        if ($(item).text() === 'One Player') {
+            // Return what Second Value to Get
+            return false;
+        } else {
+            return true;
+        }
+    }
 });
