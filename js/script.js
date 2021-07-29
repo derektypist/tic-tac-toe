@@ -37,4 +37,14 @@ $(document).ready(function() {
             $('.game-starter').fadeIn(500).children('p').text(message);
         }, 700));
     }
+
+    // Function to Show Game Choice
+    function showGameChoice() {
+        $('.game-choice').fadeIn(600);
+    }
+
+    // Function to Hide Game Choice
+    function hideGameChoice() {
+        $('.game-choice').fadeOut(600);
+    }
 });
