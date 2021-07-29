@@ -184,4 +184,10 @@ $(document).ready(function() {
         $('.score-1, .score-2').children('.points').text('0');
         $('.score-1, .score-2, .points-divider').fadeIn();
     }
+
+    // Function to Update Score
+    function updateScore(turn) {
+        let currentScore = turn === 1 ? playerOneScore : playerTwoScore;
+        $(`.score-${turn}`).children('.points').text(currentScore);
+    }
 });
