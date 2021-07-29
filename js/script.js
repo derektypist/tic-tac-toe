@@ -239,12 +239,18 @@ $(document).ready(function() {
             }
         }, 1500), setTimeout(function() {
             if (turn === 2 && secondPlayer) {
-                computerPlay();
+                // computerPlay();
             }
         }, 1200));
     }
 
-    
+    function playerTurn(square) {
+        let symbol = turn ? playerOneSymbol : playerTwoSymbol;
+        let box = $(square).children('i').children('span');
+        
+    }
+
+
 
 
 });
