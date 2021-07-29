@@ -161,4 +161,15 @@ $(document).ready(function() {
 
         }, 1500));
     }
+
+    // Function to Reset Squares
+    function resetSquares() {
+        $('.boxes').html('');
+        for (let i=1;i<=9;i++) {
+            let box = `<li class="${i}"><i class="letter"><span></span></i></li>`;
+            $(box).appendTo($('.boxes'));
+        }
+    }
+
+    
 });
