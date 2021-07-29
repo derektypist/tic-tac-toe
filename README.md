@@ -22,7 +22,7 @@ You can play against the computer or with another human player.  If you play aga
 
 ## Technologies
 
-Uses HTML5, CSS3, Font Awesome 5.15.3.
+Uses HTML5, CSS3, Font Awesome 5.15.3, Google Fonts, jQuery 3.6.0 and JavaScript.
 
 ## Credits
 
