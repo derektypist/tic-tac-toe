@@ -56,5 +56,20 @@ $(document).ready(function() {
         } else {
             $('.player-one-turn p').text('Your turn!');
         }
+        $('.player-one-turn').animate({top:'-45px'},500);
+    }
+
+    // Function to Hide Player One Prompt
+    function hidePlayerOnePrompt() {
+        $('.player-one-turn').animate({top:'0'},500);
+    }
+
+    // Function to Show Player Two Prompt
+    function showPlayerTwoPrompt() {
+        if (secondPlayer) {
+            $('.player-two-turn p').text('Go Player 2!');
+        } else {
+            $('.player-two-turn p').text(`Computer's turn`);
+        }
     }
 });
