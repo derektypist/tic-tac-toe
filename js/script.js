@@ -93,6 +93,15 @@ $(document).ready(function() {
 
     // Function to Show Lose Message
     function showLoseMessage() {
-        
+        timeOuts.push(setTimeout(function() {
+            $('.lose-message').fadeIn(500);
+        }, 1500));
     }
+
+    // Function to Hide Lose Message
+    function hideLoseMessage() {
+        $('.lose-message').fadeOut(1000);
+    }
+
+    //
 });
