@@ -71,5 +71,28 @@ $(document).ready(function() {
         } else {
             $('.player-two-turn p').text(`Computer's turn`);
         }
+        $('.player-two-turn').animate({top:'-45px'},500);
+    }
+
+    // Function to Hide Player Two Prompt
+    function hidePlayerTwoPrompt() {
+        $('.player-two-turn').animate({top:'0'},500);
+    }
+
+    // Function to Show Draw Message
+    function showDrawMessage() {
+        timeOuts.push(setTimeout(function() {
+            $('.draw-message').fadeIn(500);
+        }, 1500));
+    }
+
+    // Function to Hide Draw Message
+    function hideDrawMessage() {
+        $('.draw-message').fadeOut(1000);
+    }
+
+    // Function to Show Lose Message
+    function showLoseMessage() {
+        
     }
 });
