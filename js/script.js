@@ -17,6 +17,15 @@ $(document).ready(function() {
     let numFilledIn = 0;
     let currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
 
+    initializeGame();
+
+    // Function to Initialise Game
+    function initializeGame() {
+        numFilledIn = 0;
+        currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
+        // 
+    }
+
     /* 
         Display Functions
     */
@@ -115,4 +124,7 @@ $(document).ready(function() {
     function hideWinMessage() {
         $('.win-message').fadeOut(1000);
     }
+
+    // Function to draw board
+    function drawBoard()
 });
