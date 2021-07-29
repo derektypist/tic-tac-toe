@@ -2,6 +2,7 @@ $(document).ready(function() {
     // Set Up Global Variables
     let gameInPlay = false;
     let secondPlayer;
+    let turn;
     let winCombos = [[1,2,3],
                     [4,5,6],
                     [7,8,9],
@@ -103,5 +104,15 @@ $(document).ready(function() {
         $('.lose-message').fadeOut(1000);
     }
 
-    //
+    // Function to Show Win Message
+    function showWinMessage() {
+        timeOuts.push(setTimeout(function() {
+            $('.win-message').fadeIn(500).children('p').text(`Player ${turn} wins!!`)
+        }, 1500));
+    }
+
+    // Function to Hide Win Message
+    function hideWinMessage() {
+        $('.win-message').fadeOut(1000);
+    }
 });
