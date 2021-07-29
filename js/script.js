@@ -1,6 +1,7 @@
 $(document).ready(function() {
     // Set Up Global Variables
     let gameInPlay = false;
+    let secondPlayer;
     let winCombos = [[1,2,3],
                     [4,5,6],
                     [7,8,9],
@@ -46,5 +47,14 @@ $(document).ready(function() {
     // Function to Hide Game Choice
     function hideGameChoice() {
         $('.game-choice').fadeOut(600);
+    }
+
+    // Function to Show Player One Prompt
+    function showPlayerOnePrompt() {
+        if (secondPlayer) {
+            $('.player-one-turn p').text('Go Player 1!');
+        } else {
+            $('.player-one-turn p').text('Your turn!');
+        }
     }
 });
