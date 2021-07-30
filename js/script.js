@@ -466,8 +466,23 @@ $(document).ready(function() {
         let moves = [];
         winCombos.forEach(function(combo) {
             let notFound = [];
-        });
+            let notPlayer = true;
+            for (let i=0;i<combo.length;i++) {
+                if (board[combo[i]] !== currentSymbol) {
+                    if (board[combo[i]] === opponentSymbol) {
+                        notPlayer = false;
+                    } else {
+                        notFound.push(combo[i]);
+                    }
+                }
+            }
 
+            if (notFound.length === 1 && notPlayer) {
+                let move = notFound[0];
+                moves.push(move);
+            }
+        });
+        return moves;
 
     }
 
