@@ -552,7 +552,9 @@ $(document).ready(function() {
             }
             // Player Plays Corner, Play Opposite Corner
             else {
-                for (i=)
+                for (let i=0;i < corners.length; i++) {
+                    
+                }
             }
         }
     }
