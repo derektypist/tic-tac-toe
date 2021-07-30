@@ -410,4 +410,44 @@ $(document).ready(function() {
         showGameChoice();
     }
 
+    /*
+        Computer Move Decisions Functions
+    */
+
+    // Function to Decide Move by Computer
+    function computerWhichMove() {
+        let move = winOrBlockChoice('win')[0];
+        if (!move) {
+            move = winOrBlockChoice('block')[0];
+            console.log(winOrBlockChoice('block'));
+        }
+
+        if (!move) {
+            move = doubleThreatChoice('win');
+        }
+
+        if (!move) {
+            move = doubleThreatChoice('block');
+        }
+
+        if (!move) {
+            move = firstPlay();
+        }
+
+        if (!move) {
+            move = playCenter();
+        }
+
+        if (!move) {
+            move = emptyCorner();
+        }
+
+        if (!move) {
+            move = emptySide();
+        }
+
+        move = (move && currentBoard[move]) === '' ? move : false;
+        return move;
+    }
+
 });
