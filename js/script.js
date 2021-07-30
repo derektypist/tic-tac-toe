@@ -260,7 +260,6 @@ $(document).ready(function() {
 
     // Function for Computer Play
     function computerPlay() {
-        let computer;
         // Test Computer Move Suggestion
         let boxNumber;
         if (computerWhichMove(game) && turn === 2) {
@@ -349,7 +348,11 @@ $(document).ready(function() {
     function showWinningCombination() {
         let symbol = turn === 1 ? playerOneSymbol : playerTwoSymbol;
         let combo = checkWin(symbol)[1];
-        
+        for (let i=0; i<combo.length;i++) {
+            let currentBox = `.${combo[i]}`;
+            // Black Box and Rotating Test for Winning Combo
+            $(currentBox).children('i').addClass('win').children('span').addClass('rotate');
+        }     
     }
 
 });
