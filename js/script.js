@@ -268,8 +268,10 @@ $(document).ready(function() {
             let currentBox = $(`.${boxNumber}`).children('i');
             let symbol = playerTwoSymbol;
             timeOuts.push(setTimeout(function() {
-                
-            }));
+                currentBox.children('span').text(symbol);
+                updateSquare(boxNumber, playerTwoSymbol);
+                endTurn(symbol);
+            }, 1000));
         }
     }
 
