@@ -539,4 +539,22 @@ $(document).ready(function() {
         }
     }
 
+    // Function for First Play
+    function firstPlay() {
+        let board = currentBoard;
+        let corners = [1,3,7,9];
+        let move;
+        if (numFilledIn === 1) {
+            // Player Plays Center
+            if (board[5] === playerOneSymbol) {
+                let cornerNum = Math.floor(Math.random() * 4 + 1);
+                move = [1,3,7,9][cornerNum];
+            }
+            // Player Plays Corner, Play Opposite Corner
+            else {
+                for (i=)
+            }
+        }
+    }
+
 });
