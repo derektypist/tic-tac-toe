@@ -275,6 +275,52 @@ $(document).ready(function() {
         }
     }
 
+    // Function to End Turn
+    function endTurn(symbol) {
+        numFilledIn += 1;
+        if (gameInPlay) {
+            if (checkWin(symbol)[0]) {
+                updateGameScore(turn);
+                if (secondPlayer) {
+                    showWinMessage();
+                } else {
+                    turn === 1 ? showWinMessage() : showLoseMessage();
+                }
+                gameInPlay = false;
+                showWinningCombination();
+                hidePlayerOnePrompt();
+                hidePlayerTwoPrompt();
+                reset();
+            }
+
+            // Stop If It is a draw
+            else if (numFilledIn >=9) {
+                gameInPlay = false;
+                hidePlayerOnePrompt();
+                hidePlayerTwoPrompt();
+                showDrawMessage();
+                turn = whoStarts();
+                reset();
+            }
+
+            else {
+                if (turn === 1) {
+                    hidePlayerOnePrompt();
+                    showPlayerTwoPrompt();
+                    turn = 2;
+                    // Call Computer Turn if no second player
+                    if (!secondPlayer) {
+                        computerPlay();
+                    }
+                } else if (turn === 2) {
+                    showPlayerOnePrompt();
+                    hidePlayerTwoPrompt();
+                    turn = 1;
+                }
+            }
+        }
+    }
+
 
 
 
