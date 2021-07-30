@@ -345,4 +345,11 @@ $(document).ready(function() {
         return [winner, winningCombo];
     }
 
+    // Function to Show Winning Combination
+    function showWinningCombination() {
+        let symbol = turn === 1 ? playerOneSymbol : playerTwoSymbol;
+        let combo = checkWin(symbol)[1];
+        
+    }
+
 });
