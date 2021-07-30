@@ -486,4 +486,26 @@ $(document).ready(function() {
 
     }
 
+    // Function to Make Double Threat Choice
+    function doubleThreatChoice(choiceType) {
+        // Use winChoice Function to Test a Spot for Double Threat
+        let board = currentBoard;
+        let move;
+        if (choiceType === 'win') {
+            let currentSymbol = playerTwoSymbol;
+            let opponentSymbol = playerOneSymbol;
+        } else if (choiceType === 'block') {
+            let currentSymbol = playerOneSymbol;
+            let opponentSymbol = playerTwoSymbol;
+        }
+
+        // Forced Diagonal Win on 4th move prevention
+        if (board[5] === currentSymbol && numFilledIn === 3) {
+            if ((board[1] === opponentSymbol && board[9] === opponentSymbol) || (board[3] === opponentSymbol && board[7] === opponentSymbol) {
+                // Play an Edge to Block Double Threat
+                move = emptySide();
+            }
+        }
+    }
+
 });
