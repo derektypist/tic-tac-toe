@@ -450,4 +450,25 @@ $(document).ready(function() {
         return move;
     }
 
+    // Function to Win or Block Choice
+    function winOrBlockChoice(choiceType, board) {
+        let board = board || currentBoard;
+        if (choiceType === 'win') {
+            let currentSymbol = playerTwoSymbol;
+            let opponentSymbol = playerOneSymbol;
+        } else if (choiceType === 'block') {
+            let currentSymbol = playerOneSymbol;
+            let opponentSymbol = playerTwoSymbol;
+        } else {
+            return;
+        }
+
+        let moves = [];
+        winCombos.forEach(function(combo) {
+            let notFound = [];
+        });
+
+
+    }
+
 });
