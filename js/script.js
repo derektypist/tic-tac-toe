@@ -365,6 +365,26 @@ $(document).ready(function() {
     function reset() {
         numFilledIn = 0;
         currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
+        timeOuts.push(setTimeout(function() {
+            hideDrawMessage();
+            hideLoseMessage();
+            hideWinMessage();
+            $('.boxes li').fadeOut();
+        }, 5000),
+        setTimeout(function() {
+            resetSquares();
+            $('.boxes li').fadeIn();
+            numFilledIn = 0;
+        }, 6000),
+        /*
+            Make sure time for next timeout is long enough to
+            not cause problems for next game
+        */
+        setTimeout(function() {
+            gameInPlay = true;
+            play();
+        }, 6000)
+        );
     }
 
 });
