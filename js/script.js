@@ -501,11 +501,30 @@ $(document).ready(function() {
 
         // Forced Diagonal Win on 4th move prevention
         if (board[5] === currentSymbol && numFilledIn === 3) {
-            if ((board[1] === opponentSymbol && board[9] === opponentSymbol) || (board[3] === opponentSymbol && board[7] === opponentSymbol) {
+            if ((board[1] === opponentSymbol && board[9] === opponentSymbol) || (board[3] === opponentSymbol && board[7] === opponentSymbol)) {
                 // Play an Edge to Block Double Threat
                 move = emptySide();
             }
         }
+
+        if (!move && board[5] === opponentSymbol && numFilledIn === 2) {
+            move = diagonalSecondAttack();
+        }
+
+        if (!move) {
+            // Clone Current Board
+            let testBoard = $.extend({},board);
+            for (let i=1;i<=9;i++) {
+                testBoard = $.extend({},board);
+                if (testBoard[i]==='') {
+                    testBoard[i] = currentSymbol;
+                    if (winOrBlockChoice(choiceType,testBoard).length >= 2) {
+                        move = i;
+                    }
+                }
+            }
+        }
+        return move || false;
     }
 
 });
