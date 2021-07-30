@@ -355,4 +355,16 @@ $(document).ready(function() {
         }     
     }
 
+    // Function to Update Game Score
+    function updateGameScore(turn) {
+        turn === 1 ? playerOneScore += 1 : playerTwoScore += 1;
+        updateScore(turn);
+    }
+
+    // Function to Reset
+    function reset() {
+        numFilledIn = 0;
+        currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
+    }
+
 });
