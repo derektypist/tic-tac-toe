@@ -192,7 +192,7 @@ $(document).ready(function() {
     }
 
     /*
-        Game Logic
+        Game Logic Functions
     */
 
     // Function to See Who Starts
@@ -245,8 +245,14 @@ $(document).ready(function() {
     }
 
     function playerTurn(square) {
-        let symbol = turn ? playerOneSymbol : playerTwoSymbol;
+        let symbol = turn === 1 ? playerOneSymbol : playerTwoSymbol;
         let box = $(square).children('i').children('span');
+        if (box.text() === '' && gameInPlay && (turn === 1 || (turn === 2 && secondPlayer))) {
+            box.text(symbol);
+            let number = $(square).attr('class');
+            updateSquare(number,symbol);
+            endTurn(symbol);
+        }
         
     }
 
