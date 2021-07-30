@@ -527,4 +527,16 @@ $(document).ready(function() {
         return move || false;
     }
 
+    // Function to Make Diagonal Second Attack
+    function diagonalSecondAttack() {
+        let board = currentBoard;
+        let comp = playerTwoSymbol;
+        let corners = [1,3,7,9];
+        for (let i=0;i<corners.length;i++) {
+            if (board[corners[i]] === comp) {
+                return 10 - corners[i];
+            }
+        }
+    }
+
 });
