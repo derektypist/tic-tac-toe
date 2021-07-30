@@ -321,7 +321,28 @@ $(document).ready(function() {
         }
     }
 
+    // Function to Update Square
+    function updateSquare(number, symbol) {
+        currentBoard[number] = symbol;
+    }
 
-
+    // Function to Check Win
+    function checkWin(symbol) {
+        let wins = winCombos;
+        let winningCombo = [];
+        let winner = wins.some(function(combination) {
+            let winning = true;
+            for (let i=0; i < combination.length; i++) {
+                if (currentBoard[combination[i]] !== symbol) {
+                    winning = false;
+                }
+            }
+            if (winning) {
+                winningCombo = combination;
+            }
+            return winning;
+        });
+        return [winner, winningCombo];
+    }
 
 });
