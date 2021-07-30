@@ -14,6 +14,8 @@ $(document).ready(function() {
                     [7,5,3]];
     let playerOneScore = 0;
     let playerTwoScore = 0;
+    let playerOneSymbol = null;
+    let playerTwoSymbol = null;
     let timeOuts = [];
     let numFilledIn = 0;
     let currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
@@ -214,8 +216,8 @@ $(document).ready(function() {
 
     // Function for First Game
     function firstGame() {
-        let playerOneSymbol = $(this).text();
-        let playerTwoSymbol = playerOneSymbol == 'X' ? 'O' : 'X';
+        playerOneSymbol = $(this).text();
+        playerTwoSymbol = playerOneSymbol == 'X' ? 'O' : 'X';
         turn = whoStarts();
         hideGameStarter();
         $('#my-canvas').animate({opacity:'1'},1200);
@@ -385,6 +387,27 @@ $(document).ready(function() {
             play();
         }, 6000)
         );
+    }
+
+    // Function to Reset Game
+    function resetGame() {
+        $('#my-canvas').css('opacity','0');
+        $('.hard-reset').fadeOut();
+        $('.points-divider, .score-1, .score-2').fadeOut();
+        playerOneScore = 0;
+        playerTwoScore = 0;
+        resetSquares();
+        numFilledIn = 0;
+        currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
+        playerOneSymbol = null;
+        playerTwoSymbol = null;
+        timeOuts.forEach(function(timer) {
+            clearTimeout(timer);
+        });
+        $('.draw-message, .lose-message, .win-message').hide();
+        hidePlayerOnePrompt();
+        hidePlayerTwoPrompt();
+        showGameChoice();
     }
 
 });
