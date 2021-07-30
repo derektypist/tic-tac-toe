@@ -3,6 +3,7 @@ $(document).ready(function() {
     let gameInPlay = false;
     let secondPlayer;
     let turn;
+    let game;
     let winCombos = [[1,2,3],
                     [4,5,6],
                     [7,8,9],
@@ -239,11 +240,12 @@ $(document).ready(function() {
             }
         }, 1500), setTimeout(function() {
             if (turn === 2 && secondPlayer) {
-                // computerPlay();
+                computerPlay();
             }
         }, 1200));
     }
 
+    // Function to Decide Player Turn
     function playerTurn(square) {
         let symbol = turn === 1 ? playerOneSymbol : playerTwoSymbol;
         let box = $(square).children('i').children('span');
@@ -254,6 +256,21 @@ $(document).ready(function() {
             endTurn(symbol);
         }
         
+    }
+
+    // Function for Computer Play
+    function computerPlay() {
+        let computer;
+        // Test Computer Move Suggestion
+        let boxNumber;
+        if (computerWhichMove(game) && turn === 2) {
+            boxNumber = computerWhichMove(game);
+            let currentBox = $(`.${boxNumber}`).children('i');
+            let symbol = playerTwoSymbol;
+            timeOuts.push(setTimeout(function() {
+                
+            }));
+        }
     }
 
 
