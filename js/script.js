@@ -22,11 +22,24 @@ $(document).ready(function() {
 
     initializeGame();
 
-    // Function to Initialise Game
+    // Function to Initialize Game
     function initializeGame() {
         numFilledIn = 0;
         currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
         drawBoard();
+        $('.game-choice button').click(function() {
+            secondPlayer = gameSelection(this);
+            hideGameChoice();
+            showGameStarter(secondPlayer);
+            $('.game-starter .choose-x, .game-starter .choose-o').off().click(firstGame);
+        });
+
+        $('.back-button').click(function() {
+            hideGameStarter();
+            showGameChoice();
+        });
+
+        $('.hard-reset').click(resetGame);
     }
 
     /* 
