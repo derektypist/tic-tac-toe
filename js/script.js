@@ -253,7 +253,7 @@ $(document).ready(function() {
                 showPlayerTwoPrompt();
             }
         }, 1500), setTimeout(function() {
-            if (turn === 2 && secondPlayer) {
+            if (turn === 2 && !secondPlayer) {
                 computerPlay();
             }
         }, 1200));
