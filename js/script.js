@@ -583,7 +583,13 @@ $(document).ready(function() {
 
     // Function to Empty Side
     function emptySide() {
-        
+        let sides = [2,4,6,8];
+        for (let i=0;i<sides.length;i++) {
+            if (currentBoard[sides[i]] === '') {
+                return sides[i];
+            }
+        }
+        return false;
     }
 
 });
