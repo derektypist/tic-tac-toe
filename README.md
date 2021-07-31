@@ -21,6 +21,10 @@ As a user, my game will reset as soon as it is over so I can play again.
 
 As a user, I can choose whether I want to play as X or O.
 
+### Information Architecture
+
+The board is an object.  It has the keys of 1,2,3,4,5,6,7,8 and 9.  Its values are '','O' and 'X'. 
+
 ## Features
 
 You can play against the computer or with another human player.  If you play against the computer, you can choose X or O.  You can reset at any time, even before the outcome of the game.  This is useful in an emergency.
