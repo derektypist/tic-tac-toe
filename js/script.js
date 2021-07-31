@@ -568,4 +568,22 @@ $(document).ready(function() {
         return move ? move : false;
     }
 
+    // Function to Empty Corner
+    function emptyCorner() {
+        let board = currentBoard;
+        let corners = [1,3,7,9];
+        let move;
+        for (let i=0;i<corners.length;i++) {
+            if (board[corners[i]] === '') {
+                move = corners[i];
+            }
+        }
+        return move || false;
+    }
+
+    // Function to Empty Side
+    function emptySide() {
+        
+    }
+
 });
