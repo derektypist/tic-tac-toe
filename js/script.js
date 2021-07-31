@@ -14,8 +14,8 @@ $(document).ready(function() {
                     [7,5,3]];
     let playerOneScore = 0;
     let playerTwoScore = 0;
-    let playerOneSymbol = null;
-    let playerTwoSymbol = null;
+    let playerOneSymbol;
+    let playerTwoSymbol;
     let timeOuts = [];
     let numFilledIn = 0;
     let currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
