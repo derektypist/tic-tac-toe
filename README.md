@@ -11,7 +11,7 @@ The winner is the first player to have three of his/her symbols in a row (diagon
 
 ### Getting Started
 
-Decide how you would like to play.  Against the computer or another human player.
+Decide how you would like to play.  You can play against the computer or another human player.  If you select One Player, you can choose X or O.  If you make a mistake, select the button with the left arrow and start again.  If you choose against a human player, the first player can choose X or O.  Each player marks the symbol (e.g. X) in one of the nine squares.  Play continues until one player has three of his/her symbols in a row (diagonally, horizontally or vertically) or when the board is full.  The winner is the first player to have three of his/her symbols in a row (diagonally, horizontally or vertically).  If the board is full and no player has three of his/her symbols in a row (diagonally, horizontally or vertically), the game is a draw.  You can reset at any time, even before the outcome of the game.  This is useful in an emergency.
 
 ### User Stories
 
