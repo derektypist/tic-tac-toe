@@ -553,10 +553,19 @@ $(document).ready(function() {
             // Player Plays Corner, Play Opposite Corner
             else {
                 for (let i=0;i < corners.length; i++) {
-                    
+                    if (currentBoard[corners[i]] === playerOneSymbol) {
+                        move = 5;
+                    }
                 }
             }
         }
+
+        else if (numFilledIn === 0) {
+            let cornerNum = Math.floor(Math.random() * corners.length + 1);
+            move = corners[cornerNum];
+        }
+
+        return move ? move : false;
     }
 
 });
