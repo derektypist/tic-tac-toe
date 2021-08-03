@@ -221,6 +221,11 @@ i.win {
     top: 0px;
     text-align: center;
     z-index: 1500;
+    /* display: none; */
+}
+
+.game-starter {
+    display: none;
 }
 
 
