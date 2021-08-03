@@ -27,9 +27,10 @@ $(document).ready(function() {
         numFilledIn = 0;
         currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
         drawBoard();
-        $('.one-player').click(function() {
+        $('.game-choice button').click(function() {
+            game = gameSelection(this);
             hideGameChoice();
-            showGameStarter(gameSelection(this));
+            showGameStarter(game);
             $('.game-starter .choose-x, .game-starter .choose-o').off().click(firstGame);
             $('.back-button').on('click', function() {
                 hideGameStarter();
