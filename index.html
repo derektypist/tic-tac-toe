@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,14 +15,15 @@
     <!-- Load Scripts -->
     <script src="js/script.js"></script>
 </head>
+
 <body>
     <main>
         <!-- Set Up Title -->
         <header>
             <h1>Tic Tac Toe</h1>
         </header>
-        <!-- Set Up Outer Container -->
-        <article class="outer-container">
+        <!-- Set Up Container -->
+        <article class="container">
             <!-- Draw Board -->
             <article class="board">
                 <article class="box"></article>
@@ -36,7 +38,21 @@
             </article>
             <!-- Set Up Reset Button -->
             <article class="reset" id="reset">RESET <i class="fas fa-redo"></i></article>
+        </article>
+        
+        <!-- Set Up Pop-Up -->
+        <article class="pop-up" id="pop">
+            <!-- Set Up Pop Container -->
+            <article class="pop-container" id="pop-con">
+                <!-- Set Up Choice of X or O -->
+                <h3 id="banner">Choose your side (X or O)</h3>
+                <article class="choose-x" id="symb-x">X</article>
+                <article class="choose-o" id="symo-o">O</article>
+            </article>
+        </article>
+
 
     </main>
 </body>
+
 </html>
