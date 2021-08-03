@@ -27,7 +27,7 @@ $(document).ready(function() {
         numFilledIn = 0;
         currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
         drawBoard();
-        $('.game-choice button').click(function() {
+        $('.one-player').click(function() {
             secondPlayer = gameSelection(this);
             hideGameChoice();
             showGameStarter(secondPlayer);
