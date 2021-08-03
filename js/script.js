@@ -242,7 +242,7 @@ $(document).ready(function() {
     // Function to Play Game
     function play() {
         gameInPlay = true;
-        $('.boxes li').click(function() {
+        $('.boxes li').on('click', function() {
             playerTurn(this);
         });
 
