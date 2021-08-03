@@ -32,13 +32,13 @@ $(document).ready(function() {
             hideGameChoice();
             showGameStarter(secondPlayer);
             $('.game-starter .choose-x, .game-starter .choose-o').off().click(firstGame);
-            $('.back-button').click(function() {
+            $('.back-button').on('click', function() {
                 hideGameStarter();
                 showGameChoice();
             });
         });
 
-        $('.hard-reset').click(resetGame);
+        $('.hard-reset').on('click', resetGame);
     }
 
     /* 
