@@ -6,6 +6,10 @@ body {
     color: white;
 }
 
+/* Header */
+header {
+    text-align: center;
+}
 
 /* Container */
 .container {
