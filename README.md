@@ -37,7 +37,7 @@ Uses HTML5, CSS3, Font Awesome 5.15.3, Google Fonts, jQuery 3.6.0 and JavaScript
 
 ### Content
 
-Most of the code is taken from FreeCodeCamp (codepen https://codepen.io/freeCodeCamp/full/KzXQgy/).
+Most of the code is taken from Robert Green (https://codepen.io/robwgreenjr/pen/BZxeYR).
 
 ### Acknowledgements
 
