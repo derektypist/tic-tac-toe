@@ -28,9 +28,8 @@ $(document).ready(function() {
         currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
         drawBoard();
         $('.one-player').click(function() {
-            secondPlayer = gameSelection(this);
             hideGameChoice();
-            showGameStarter(secondPlayer);
+            showGameStarter(gameSelection(this));
             $('.game-starter .choose-x, .game-starter .choose-o').off().click(firstGame);
             $('.back-button').on('click', function() {
                 hideGameStarter();
