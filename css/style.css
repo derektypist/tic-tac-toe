@@ -105,3 +105,40 @@ h3 {
     font-size: 40px;
 }
 
+.reset {
+    width: 70px;
+    padding: 7px;
+    background: #a6a6a6;
+    color: #e5e5e5;
+    position: relative;
+    top: 50px;
+    left: 160px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background: #cccccc;
+    color: #a6a6a6;
+}
+
+.reset:active {
+    top: 52px;
+}
+
+@keyframes slide {
+    from {top: 0px;}
+    to {top: 210px;}
+}
+
+/* Media Query */
+@media screen and (max-width: 550px) {
+    .container {
+        left: 25px;
+    }
+
+    .pop-container {
+        left: 10px;
+    }
+}
