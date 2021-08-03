@@ -1,7 +1,7 @@
 /* Body */
 body {
     font-family: "Roboto", Arial, Verdana, sans-serif;
-    background-color: black;
+    background: black;
     margin: auto;
 }
 
@@ -15,23 +15,12 @@ body {
     margin: auto;
 }
 
-/* Board Container */
-.board-container {
-    background: black;
-    width: 350px;
-    height: 350px;
-    background-size:cover;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-}
 
-/* Game Board */
-.game-board {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 0 auto;
+/* Board */
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 /* Boxes */
