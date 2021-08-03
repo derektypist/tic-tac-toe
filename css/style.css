@@ -223,9 +223,7 @@ i.win {
     z-index: 1500;
 }
 
-.game-starter {
-    display: none;
-}
+
 
 .game-choice p,.game-starter p {
     font-size: 2.2rem;
