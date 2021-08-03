@@ -71,3 +71,37 @@ body {
     animation-duration: 2s;
 }
 
+h3 {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    top: 20px;
+}
+
+.choose-x {
+    width: 100px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+    top: 25px;
+    left: 75px;
+    cursor: pointer;
+    text-align: center;
+    padding: 3px;
+    font-size: 40px;
+}
+
+.choose-o {
+    width: 100px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+    top: -27px;
+    right: 75px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 40px;
+}
+
