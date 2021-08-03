@@ -20,8 +20,6 @@
     let numFilledIn = 0;
     let currentBoard = {1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''};
 
-   
-
     // Function to Initialize Game
     function initializeGame() {
         numFilledIn = 0;
@@ -604,4 +602,6 @@
         return false;
     }
 
-$(document).ready(initializeGame);
+$(document).ready(function() {
+    initializeGame();
+});
