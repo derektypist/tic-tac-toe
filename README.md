@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-Tic Tac Toe is a game for 2 players.  You can play against the computer.  The aim of this project is to have functionality
+Tic Tac Toe is a game for 2 players.  You can play against the computer or another human player.  The aim of this project is to have functionality
 similar to https://codepen.io/freeCodeCamp/full/KzXQgy/.
 
 ## UX
