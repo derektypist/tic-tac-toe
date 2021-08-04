@@ -25,6 +25,10 @@ As a user, I can choose whether I want to play as X or O.
 
 The board is an object.  It has the keys of 1,2,3,4,5,6,7,8 and 9.  Its values are '','O' and 'X'. 
 
+### Wireframes
+- [Startup](wireframes/tic-tac-toe-startup.png)
+- [Game Choice]
+
 ## Features
 
 You can play against the computer with a choice of X or O.  You can reset at any time, even before the outcome of the game.  This is useful in an emergency.
