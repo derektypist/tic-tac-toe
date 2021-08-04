@@ -13,44 +13,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Load Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </head>
 
 <body>
-    
+
+    <main>
         <!-- Set Up Title -->
         <header>
             <h1>Tic Tac Toe</h1>
         </header>
-        <!-- Set Up Container -->
-        <article class="container">
-            <!-- Draw Board -->
-            <article class="board">
-                <article class="box"></article>
-                <article class="box"></article>
-                <article class="box"></article>
-                <article class="box"></article>
-                <article class="box"></article>
-                <article class="box"></article>
-                <article class="box"></article>
-                <article class="box"></article>
-                <article class="box"></article>
+        <!-- Set Up Outer Container -->
+        <article class="outer-container">
+            <!-- Set Up Reset All Button -->
+            <button class="hard-reset">Reset All</button>
+            <!-- Set Up Scores with Vertical Line -->
+            <p class="score-1"><span class="points"></span><span class="name"></span></p>
+            <i class="points-divider">&#124;</i>
+            <p class="score-2"><span class="points"></span><span class="name"></span></p>
+            <!-- Set Up Player One Turn -->
+            <article class="player-one-turn">
+                <p></p>
             </article>
-            <!-- Set Up Reset Button -->
-            <article class="reset" id="reset">RESET <i class="fas fa-redo"></i></article>
-        </article>
-
-        <!-- Set Up Pop-Up -->
-        <article class="pop-up" id="pop">
-            <!-- Set Up Pop Container -->
-            <article class="pop-container" id="pop-con">
-                <!-- Set Up Choice of X or O -->
-                <h3>Choose your side (X or O)</h3>
-                <article class="choose-x" id="symb-x">X</article>
-                <article class="choose-o" id="symo-o">O</article>
+            <!-- Set Up Player Two Turn -->
+            <article class="player-two-turn">
+                <p></p>
+            </article>
+            <!-- Set Up Board Container -->
+            <article class="board-container">
+                <!-- Set Up Game Starter -->
+                <article class="game-starter">
+                    <p>Would you like to be X or O?</p>
+                    <button class="choose-x">X</button>
+                    <button class="choose-o">O</button>
+                    <button class="back-button"><i class="fas fa-arrow-left"></i></button>
+                </article>
+                <!-- Set Up Game Choice -->
+                <article class="game-choice">
+                    <p>How do you want to play?</p>
+                    <button class="one-player">One Player</button>
+                    <button class="two-player">Two Player</button>
+                </article>
+                <!-- Set Up Game Board -->
+                <article class="game-board">
+                    <!-- Set Up Draw Message -->
+                    <article class="draw-message">
+                        <p>It was a draw</p>
+                    </article>
+                    <!-- Set Up Lose Message -->
+                    <article class="lose-message">
+                        <p>You lost!!</p>
+                    </article>
+                    <!-- Set Up Win Message -->
+                    <article class="win-message">
+                        <p>You won!!</p>
+                    </article>
+                    <!-- Draw Canvas -->
+                    <canvas id="my-canvas"></canvas>
+                    <!-- Set Up Boxes -->
+                    <ul class="boxes"></ul>
+                </article>
             </article>
         </article>
-    
+    </main>
 </body>
-
 </html>
