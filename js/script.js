@@ -464,13 +464,15 @@ $(document).ready(function() {
 
     // Function to Win or Block Choice
     function winOrBlockChoice(choiceType, board) {
-        let board = board || currentBoard;
+        board = board || currentBoard;
+        let currentSymbol;
+        let opponentSymbol;
         if (choiceType === 'win') {
-            let currentSymbol = playerTwoSymbol;
-            let opponentSymbol = playerOneSymbol;
+            currentSymbol = playerTwoSymbol;
+            opponentSymbol = playerOneSymbol;
         } else if (choiceType === 'block') {
-            let currentSymbol = playerOneSymbol;
-            let opponentSymbol = playerTwoSymbol;
+            currentSymbol = playerOneSymbol;
+            opponentSymbol = playerTwoSymbol;
         } else {
             return;
         }
@@ -503,12 +505,14 @@ $(document).ready(function() {
         // Use winChoice Function to Test a Spot for Double Threat
         let board = currentBoard;
         let move;
+        let currentSymbol;
+        let opponentSymbol;
         if (choiceType === 'win') {
-            let currentSymbol = playerTwoSymbol;
-            let opponentSymbol = playerOneSymbol;
+            currentSymbol = playerTwoSymbol;
+            opponentSymbol = playerOneSymbol;
         } else if (choiceType === 'block') {
-            let currentSymbol = playerOneSymbol;
-            let opponentSymbol = playerTwoSymbol;
+            currentSymbol = playerOneSymbol;
+            opponentSymbol = playerTwoSymbol;
         }
 
         // Forced Diagonal Win on 4th move prevention
@@ -578,6 +582,13 @@ $(document).ready(function() {
         }
 
         return move ? move : false;
+    }
+  
+    // Function to Play Center
+    function playCenter() {
+      if (currentBoard === '') {
+        return 5;
+      }
     }
 
     // Function to Empty Corner
