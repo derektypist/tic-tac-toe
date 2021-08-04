@@ -7,11 +7,11 @@ similar to https://codepen.io/freeCodeCamp/full/KzXQgy/.
 
 Tic Tac Toe is a game for 2 players.  Each player marks a symbol (e.g. X) in one of the nine squares.  Play continues until one player
 has three of his/her symbols in a row (diagonally, horizontally or vertically) or when the board is full.
-The winner is the first player to have three of his/her symbols in a row (diagonally, horizontally or vertically).  You can play against the computer.
+The winner is the first player to have three of his/her symbols in a row (diagonally, horizontally or vertically).  You can play against the computer or against another human player.
 
 ### Getting Started
 
-Choose X or O.  If you choose X, the computer chooses O.  If you choose O, the computer chooses X.  Each player marks the symbol (e.g. X) in one of the nine squares.  Play continues until one player has three of his/her symbols in a row (diagonally, horizontally or vertically) or when the board is full.  The winner is the first player to have three of his/her symbols in a row (diagonally, horizontally or vertically).  If the board is full and no player has three of his/her symbols in a row (diagonally, horizontally or vertically), the game is a draw.  You can reset at any time, even before the outcome of the game.  This is useful in an emergency.
+Choose how you would like to play (One Player - Against the Computer or Two Player - Against a Human Player).  If you make a mistake, select ehe one with the left arrow.  If you play aainst the computer, you can choose X or O.  If you choose X, the computer chooses O.  If you choose O, the computer chooses X.  If you play against the human player, the first player chooses X or O.  Each player marks the symbol (e.g. X) in one of the nine squares.  Play continues until one player has three of his/her symbols in a row (diagonally, horizontally or vertically) or when the board is full.  The winner is the first player to have three of his/her symbols in a row (diagonally, horizontally or vertically).  If the board is full and no player has three of his/her symbols in a row (diagonally, horizontally or vertically), the game is a draw.  You can reset at any time, even before the outcome of the game.  This is useful in an emergency.
 
 ### User Stories
 
@@ -31,7 +31,7 @@ You can play against the computer with a choice of X or O.  You can reset at any
 
 ## Technologies
 
-Uses HTML5, CSS3, Font Awesome 5.15.3, Google Fonts and JavaScript.
+Uses HTML5, CSS3, Font Awesome 5.15.3, Google Fonts, jQuery 3.6.0 and JavaScript.
 
 ## Testing
 
@@ -45,10 +45,9 @@ Deployed on [GitHub Pages](https://derektypist.github.io/tic-tac-toe) at the mai
 
 ### Content
 
-Most of the code is taken from Robert Green (https://codepen.io/robwgreenjr/pen/BZxeYR).
+Most of the code is taken from [FreeCodeCamp](https://codepen.io/freeCodeCamp/full/KzXQgy/)
 
 ### Acknowledgements
 
 - [FreeCodeCamp](https://www.freecodecamp.org)
 - [w3Schools](https://www.w3schools.com)
-- [Robert Green](https://codepen.io/robwgreenjr/pen/BZxeYR)
