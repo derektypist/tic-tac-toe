@@ -1,9 +1,13 @@
 /* Body */
 body {
     font-family: "Roboto", Arial, Verdana, sans-serif;
-    background: black;
-    margin: auto;
-    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+/* List Style */
+li {
+    list-style: none;
 }
 
 /* Header */
@@ -11,138 +15,283 @@ header {
     text-align: center;
 }
 
-/* Container */
-.container {
+/* Outer Container - Set Background to Peach Nougat */
+.outer-container {
+    background: rgb(230,175,145);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
     position: relative;
-    top: 150px;
-    max-width: 400px;
-    max-height: 400px;
-    margin: auto;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    margin: 10% auto;
+    padding: 40px 0 0;
 }
 
-
-/* Board */
-.board {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+/* Board Container */
+.board-container {
+    background: black;
+    width: 350px;
+    height: 350px;
+    background-size:cover;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-/* Box */
-.box {
-    width: 130px;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 520%;
-}
-
-/* Draw Lines on Box */
-.box:nth-child(1),.box:nth-child(2),box:nth-child(3) {
-    border-bottom: 5px solid #e5e5e5;
-}
-
-.box:nth-child(7),box:nth-child(8),box:nth-child(9) {
-    border-top: 5px solid #e5e5e5;
-}
-
-.box:nth-child(2),box:nth-child(5),box:nth-child(8) {
-    border-left: 5px solid #e5e5e5;
-    border-right: 5px solid #e5e5e5;
-}
-
-/* Pop-Up */
-#pop {
-    background-color: rgba(0,0,0,0.8);
+/* Game Board */
+.game-board {
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Boxes */
+.boxes {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 12px;
     top: 0;
+}
+
+.boxes li {
+    width: 30%;
+    height: 30%;
+    display: inline-block;
+    position: relative;
+    z-index: 1000;
+    margin-left: 2px;
+    margin-right: 2px;
+    overflow: hidden;
+}
+
+li i {
+    font-size: 6.5rem;
+    text-align: center;
     display: block;
+    width: 100%;
+    height: 100%;
+    font-style: normal;
+    color: rgb(180,183,186);
+    z-index: 500;
 }
 
-.pop-container {
-    width: 450px;
-    height: 225px;
-    background: #a6a6a6;
+li span {
     position: relative;
-    top: 210px;
-    right: 10px;
-    border-radius: 10px;
-    animation-name: slide;
-    animation-duration: 2s;
+    bottom: 15px;
 }
 
-h3 {
-    position: relative;
+/* Canvas Drawing */
+#my-canvas {
+    width: 330px;
+    height: 330px;
+    position: absolute;
+    z-index: 0;
+    left: 10px;
+    top: 0;
+    opacity: 0;
+}
+
+/* Player/Computer Prompt */
+.player-one-turn {
+    background: rgba(79,132,196,1);
+    left: 15px;
+}
+
+.player-two-turn {
+    background: rgba(220,76,70,1);
+    right: 15px;
+}
+
+.player-one-turn, .player-two-turn {
+    position: absolute;
+    top: 0;
+    width: 170px;
+    height: 50px;
+    z-index: -10;
+    color: white;
     text-align: center;
-    padding: 20px;
-    top: 20px;
 }
 
-.choose-x {
-    width: 100px;
-    background-color: #e5e5e5;
-    border-radius: 10px;
-    position: relative;
-    margin: auto;
-    top: 25px;
+.player-one-turn p, .player-two-turn p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+/* Score Keeping */
+.points-divider, .score-1, .score-2 {
+    position: absolute;
+    margin: 0;
+    display: none;
+    font-size: 0.9rem;
+}
+
+.score-1, .score-2 {
+    top: 17px;
+    color: rgba(100,60,50,0.8);
+}
+
+.score-1 .points, .score2 .points {
+    position: absolute;
+    text-align: center;
+    bottom: 14px;
+    color: rgba(100,60,50,0.9);
+}
+
+.points-divider {
+    top: 5px;
+    left: 135px;
+    font-size: 2rem;
+    font-style: normal;
+    opacity: 0.2;
+}
+
+.score-1 {
     left: 75px;
-    cursor: pointer;
-    text-align: center;
-    padding: 3px;
-    font-size: 40px;
 }
 
-.choose-o {
-    width: 100px;
-    background-color: #e5e5e5;
-    border-radius: 10px;
-    position: relative;
-    margin: auto;
-    top: -27px;
-    right: 75px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 40px;
+.score-2 {
+    left: 161px;
 }
 
-.reset {
-    width: 70px;
-    padding: 7px;
-    background: #a6a6a6;
-    color: #e5e5e5;
+/* Reset Button */
+.hard-reset {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: rgba(100,60,50,0.8);
+    font-size: 1.1rem;
+    border-radius: 20px;
+    border: 2px dashed transparent;
+    display: none;
+}
+
+.hard-reset:hover {
+    border: 2px dashed rgba(100,60,50,1);
+    color: rgba(100,60,50,1);
+}
+
+.hard-reset:focus {
+    outline: none;
+}
+
+/* Result Feedback */
+span.rotate {
+    color: rgba(79,132,196,1);
+}
+
+i.win {
+    background: black;
+}
+
+.draw-message, .win-message, .lose-message {
+    background: rgba(0,0,0,0.8);
+    width: 400px;
+    height: 400px;
+    z-index: 2000;
+    position: absolute;
+    display: none;
+    top: -15px;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.draw-message p, .win-message p, .lose-message p {
+    color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 2.3rem;
+    margin: 0;
+    top: 150px;
+    left: 50px;
+}
+
+/* Game Starter */
+.game-choice, .game-starter {
+    background: black;
+    display: block;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    z-index: 1500;
+}
+
+.game-starter {
+    display: none;
+}
+
+.game-choice p,.game-starter p {
+    font-size: 2.2rem;
+}
+
+.game-choice button, .game-choice p, .game-starter button, .game-starter p {
+    color: rgba(220,220,220,1);
     position: relative;
     top: 50px;
-    left: 160px;
-    text-align: center;
-    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.game-choice p, .game-starter p {
+    max-width: 80%;
+}
+
+.game-choice button, .game-starter button {
+    background: none;
+    border: none;
+    opacity: 0.6;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    font-size: 1.7rem;
+    font-family: inherit;
+}
+
+.game-starter button {
+    font-size: 2.8rem;
+}
+
+.game-choice button:focus, .game-starter button:focus {
+    outline: none;
+}
+
+.game-choice button:hover, .game-starter button:hover {
+    opacity: 1;
+    border: 2px dashed rgba(230,230,230,0.5);
+}
+
+.game-starter button.back-button {
+    position: absolute;
+    top: 270px;
+    left: 130px;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.game-starter .back-button:hover {
+    border: none;
+}
+
+button {
     cursor: pointer;
 }
 
-.reset:hover {
-    background: #cccccc;
-    color: #a6a6a6;
+/* Win/Lose Animation */
+.rotate {
+    animation: rotating 2s linear infinite;
 }
 
-.reset:active {
-    top: 52px;
-}
-
-@keyframes slide {
-    from {top: 0px;}
-    to {top: 210px;}
-}
-
-/* Media Query */
-@media screen and (max-width: 550px) {
-    .container {
-        left: 25px;
+@keyframes rotating {
+    from {
+        transform: rotateY(0deg);
     }
 
-    .pop-container {
-        left: 10px;
+    to {
+        transform: rotateY(360deg);
     }
 }
