@@ -26,8 +26,14 @@ As a user, I can choose whether I want to play as X or O.
 The board is an object.  It has the keys of 1,2,3,4,5,6,7,8 and 9.  Its values are '','O' and 'X'. 
 
 ### Wireframes
+
 - [Startup](wireframes/tic-tac-toe-startup.png)
-- [Game Choice]
+- [Game Starter](wireframes/tic-tac-toe-game-starter.png)
+- [Go First Player](wireframes/tic-tac-toe-go-first-player.png)
+- [Go Second Player](wireframes/tic-tac-toe-go-second-player.png)
+- [Two Player](wireframes/tic-tac-toe-two-player.png)
+- [Your Turn](wireframes/tic-tac-toe-your-turn.png)
+- [Draw](wireframes/tic-tac-toe-draw.png)
 
 ## Features
 
