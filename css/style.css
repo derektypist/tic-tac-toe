@@ -136,7 +136,7 @@ li span {
 .score-1 .points, .score2 .points {
     position: absolute;
     text-align: center;
-    bottom: 14px;
+    bottom: 10px;
     color: rgba(100,60,50,0.9);
 }
 
