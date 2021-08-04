@@ -33,6 +33,14 @@ You can play against the computer or with another human player.  If you play aga
 
 Uses HTML5, CSS3, Font Awesome 5.15.3, Google Fonts, jQuery 3.6.0 and JavaScript.
 
+## Testing
+
+Ensure all the user stories have been met.
+
+## Deployment
+
+Deployed on [GitHub Pages](https://derektypist.github.io/tic-tac-toe) at the main branch.
+
 ## Credits
 
 ### Content
