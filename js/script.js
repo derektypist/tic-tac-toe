@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {
     // Set Up Global Variables
     let gameInPlay = false;
@@ -616,3 +617,9 @@ $(document).ready(function() {
     }
 
 });
+=======
+// Apply Selection of Elements
+const pickBox = document.getElementsByClassName('box');
+const resetB = document.getElementById('reset');
+const chooseX = document.getElementById('symb-x');
+>>>>>>> f1909c2d3fe35459a87bb460bb49508718a054db
