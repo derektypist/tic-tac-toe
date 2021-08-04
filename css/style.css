@@ -133,10 +133,10 @@ li span {
     color: rgba(100,60,50,0.8);
 }
 
-.score-1 .points, .score2 .points {
+.score-1 .points, .score-2 .points {
     position: absolute;
     text-align: center;
-    bottom: 10px;
+    bottom: 14px;
     color: rgba(100,60,50,0.9);
 }
 
